@@ -428,7 +428,25 @@ if __name__ == "__main__":
 # The interactions between different classes simulate the flow of actions and processes in an online shopping system, such as adding products, placing orders, etc.
 # Enums and constants define and manage the various states and statuses that these entities can have, ensuring consistency and clarity in the code.
 
+# Encapsulation:
 
+# Encapsulation refers to the bundling of data and methods that operate on the data within a single unit, such as a class. It hides the internal state of an object and only exposes the necessary functionalities. In the code:
+# All class attributes are defined as private variables using double underscores (__), such as self.__user_name, self.__password, etc., in classes like Account, Product, Item, etc. This encapsulates the internal state of the objects and restricts direct access to them from outside the class.
+# Methods like add_product, add_product_review, reset_password, get_name, update_quantity, etc., are used to manipulate the internal state of objects, encapsulating the behavior within the respective classes.
+# Inheritance:
+
+# Inheritance allows a class (subclass) to inherit attributes and methods from another class (superclass). It promotes code reusability and establishes a hierarchical relationship between classes. In the code:
+# Class Customer inherits from class Object, implicitly.
+# Classes Guest and Member inherit from class Customer, indicating that they share common behavior and attributes with the Customer class. They extend the functionality of the Customer class with additional methods like register_account and place_order, respectively.
+# Polymorphism:
+
+# Polymorphism allows objects of different classes to be treated as objects of a common superclass, enabling the same interface to be used for different types of objects. It promotes flexibility and modularity in the code. In the code:
+# The place_order method in the Member class exhibits polymorphic behavior by accepting an Order object as an argument. It demonstrates the ability to process orders differently based on the specific type of customer (member).
+# Abstraction:
+
+# Abstraction involves hiding the complex implementation details and showing only the essential features of an object. It focuses on what an object does rather than how it does it. In the code:
+# Classes like Account, Customer, Product, Item, etc., encapsulate the internal details and provide a clear interface for interacting with the objects. External users can utilize the methods exposed by these classes without needing to understand their internal implementation.
+# The search_action, add_product_action, add_review_action, and place_order_action methods in the OnlineShoppingApp class abstract away the implementation details of searching products, adding products/reviews, and placing orders, providing a simplified interface for users interacting with the GUI.
 
 #Account Class:
 
